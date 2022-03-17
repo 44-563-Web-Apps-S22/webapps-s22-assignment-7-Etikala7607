@@ -80,6 +80,22 @@
              }
         }
     }
+    function removeDuplicate(){
+    queueItems = document.getElementsByClassName("queue")
+		for (let i = 0; i < queueItems.length; i++) {
+			for (let j = 0; j < queueItems.length; j++) {
+				if(queueItems[i].innerHTML == queueItems[j].innerHTML && i!=j){
+					queueItems[j].remove();
+				}
+			}	
+		}
+		console.log("removing the duplicates");
+        
+        }  
+
+
+
+    
 
 </script>
 </html>	

@@ -61,6 +61,7 @@
         <div class="col-sm-1"><img src="bush.jpg" id = "23"   onclick = "check(23)" alt="lav" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
         <div class="col-sm-1"><img src="bush.jpg" id = "24"   onclick = "check(24)" alt="lav" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
     </div>
+    <button type="button" class="btn btn-info" onclick="newGame()">New Game</button>
     <div>
         <script>
             var ids=["0", "1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12", "13", "14", "15", 
@@ -138,6 +139,18 @@
            return 0
          }
   
+         }
+         function newGame(){
+            shakeCount=0;
+            birdlLocation = Math.floor(Math.random() * (25-0) + 0);
+            document.getElementById("shakes").innerHTML = "Number of shakes is zero";
+            birddistance = "unknown"
+            document.getElementById("score").innerHTML = "Distance is " + birddistance;
+            for (var i = 0; i < 24; i++) {
+           
+            document.getElementById(ids[i]).src = "bush.jpg";
+        }
+
          }
 
 
